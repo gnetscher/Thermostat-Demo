@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Thermostat Demo
+Icon=/usr/share/matrix-gui-2.0/apps/images/qt-icon.png
+Exec=/home/root/ThermostatDemo
+Type=Application
+Categories=george_dir
+ProgramType=gui
+X-MATRIX-Lock=qt

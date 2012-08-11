@@ -1,0 +1,327 @@
+weatherwidget,thermostatwidget,optionswidget {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+									  stop: 0 black, stop: 0.01 rgb(100, 100, 100), 
+									  stop: 0.02 black);								  						  
+	border: 2px groove gray;
+	border-radius: 10px;
+	padding: 2px 4px;
+	qproperty-alignment: AlignCenter;
+}
+/*
+optionswidget {
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+*/
+weatherwidget > QLabel {
+	color: white;	
+	font-size: 20px;
+	qproperty-alignment: AlignCenter;
+}
+
+weatherwidget > QLabel#currentCity {
+	font-size: 16px;
+}
+
+weatherwidget > QLabel#currentTemp {
+	font-size: 50px;
+}
+
+weatherwidget:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+									  stop: 0 black, stop: 0.03 white, 
+									  stop: 0.05 rgb(100,100,100), stop: 0.1 black);
+	border-style: inset;
+}
+
+thermostatwidget > QLabel {
+	color: white;
+	font-size: 32px;
+	qproperty-alignment: AlignCenter;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+thermostatwidget > QLabel#currentTemp {
+	font-size: 84px;
+	padding: -5px;
+	margin-right: -30px;
+}
+
+thermostatwidget > QPushButton {
+	color: white;
+	font-size: 36px;
+	border: 2px solid #555;
+	border-radius: 11px;
+	padding: 5px;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 rgb(100,100,100));
+	width: 40px;
+	height: 40px;
+}	
+
+thermostatwidget > QPushButton:pressed {
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 #888);
+}
+
+optionswidget > QPushButton {
+	background: rgba(0,0,0,0);
+	margin: 0;
+	padding: 4px 4px;
+	height: 45px;
+	width: 49px;
+}
+
+#closeButton {
+	background: rgba(0,0,0,0);
+	margin: 0;
+	padding: 1px;
+	height: 10px;
+	width: 10px;
+}
+
+#energyButton {
+	background: green;
+	color: white;
+}
+
+#timeButton {
+	background: black;
+	color: white;
+}
+
+#dateButton {
+	background: black;
+	color: white;
+	qproperty-alignment: AlignCenter;
+}
+
+awayscreen {
+	background: black;
+}
+
+awayscreen > QLabel {
+	color: white;
+	font-size: 16px;
+}
+
+awayscreen > QLabel#ecoLabel {
+	width: 30px;
+}
+
+awayscreen > QLabel#currentTemp {
+	font-size: 100px;
+}
+
+awayscreen > QSpinBox {
+     color: white;
+     background: rgba(0,0,0,0);
+     font-size: 36px;
+     width: 120px;
+     height: 60px;
+}
+
+awayscreen > QSpinBox::up-button {
+     subcontrol-origin: border;
+     subcontrol-position: top right;
+     width: 50px;
+     border-image: url(:/Images/simple-black-square-icon-arrowup.png) 1;
+     border-bottom-width: -5px; 
+     border-top-width: 0px;  
+     border-right-width: 0px;
+     border-left-width: 0px;
+}
+
+awayscreen > QSpinBox::down-button {
+     subcontrol-origin: border;
+     subcontrol-position: bottom right;
+     width: 50px;
+     border-image: url(:/Images/simple-black-square-icon-arrowdown.png) 1;
+     border-top-width: -5px;   
+     border-bottom-width: 0px;
+     border-right-width: 0px;
+     border-left-width: 0px;
+}
+
+awayscreen > QPushButton {
+	color: white;
+	font-size: 16px;
+	border: 2px solid #555;
+	border-radius: 11px;
+	padding: 5px;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 rgb(100,100,100));
+}
+
+schedulescreen {
+	background: black;
+}
+
+schedulescreen > QLabel {
+	color: white;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+schedulescreen > QLabel#title {
+	font-size: 16px;
+}
+
+schedulescreen > QLabel#currentTime {
+	font-size: 16px;
+}
+
+schedulescreen > QCheckBox::indicator:checked {
+	image: url(:/Images/simple-black-square-icon-check-box-full.png) 1;
+	height: 32px;
+	width: 32px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+schedulescreen > QCheckBox::indicator:unchecked {
+	image: url(:/Images/simple-black-square-icon-check-box-empty.png) 1;
+	height: 32px;
+	width: 32px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+schedulescreen > QCheckBox {
+	color: white;
+	spacing: 0px;
+}
+
+schedulescreen > QPushButton {
+	background: rgba(0,0,0,0);
+	margin: 0;
+	padding: 4px 4px;
+	height: 20px;
+	width: 23px;
+}
+
+schedulescreen > QGraphicsView {
+	background: black;
+	border: 0;
+}
+
+QMessageBox {
+	background: black;
+	spacing: 40px;
+}
+
+QMessageBox > QWidget {
+	color: white;
+	font-size: 16px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	margin: 15px;
+	border: 15px;
+}
+
+proxySetupDialog {
+	background: black;
+}
+
+proxySetupDialog > QLabel {
+	color: white;
+	font-size: 16px;
+}
+
+proxySetupDialog > QLineEdit {
+    border: 2px white;
+	border-radius: 2px;
+	padding: 0 8px;
+	background: white;
+	color: black;
+	font-size: 16px;
+}
+
+Keyboard {
+	background: black;
+	color: white;
+}
+
+settingscreen {
+	background: black;
+}
+
+settingscreen > QLabel {
+	color: white;
+	font-size: 16px;
+}
+
+settingscreen > QPushButton#backButton {
+	background: rgba(0,0,0,0);
+	margin: 0;
+	border: 0;
+	padding: 4px 4px;
+	height: 20px;
+	width: 23px;
+}
+
+settingscreen > QPushButton {
+	color: white;
+	font-size: 16px;
+	border: 2px solid #555;
+	border-radius: 11px;
+	padding: 5px;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 rgb(50,50,50));
+}
+
+settingscreen > QPushButton:checked {
+	color: black;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 white);
+}
+
+settingscreen > QComboBox {
+    color: white;
+    font: 16pt;
+    background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 rgb(100,100,100));
+	border: 2px solid #555;
+	border-radius: 11px;
+	padding: 5px;
+}
+
+
+settingscreen > QComboBox:on {
+    color: white;
+    font: 16pt;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 #888);
+	border: 2px solid #555;
+	border-radius: 11px;
+	padding: 5px;
+}
+
+settingscreen > QComboBox::drop-down {
+	background:  rgba(0,0,0,0);
+	padding-right: 10px;
+}
+
+settingscreen > QComboBox::down-arrow {
+	border-image: url(:/Images/down-arrow.png);
+}
+
+settingscreen > QComboBox QAbstractItemView {
+    color: white;
+	border: 2px solid #555;
+    selection-background-color: black;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+	fx: 0.3, fy: -0.4,
+	radius: 1.35, stop: 0 black, stop: 1 #888);
+ }
