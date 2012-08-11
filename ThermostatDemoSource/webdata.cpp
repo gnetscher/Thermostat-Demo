@@ -21,7 +21,7 @@ webdata::webdata(QObject *parent) :
     }
 
     // provide default request for Dallas, TX
-    request = new QNetworkRequest(QUrl("http://api.wunderground.com/api/8629c52c6434d424/geolookup/conditions/forecast/q/TX/Dallas.xml"));
+    request = new QNetworkRequest(QUrl("http://api.wunderground.com/api/9d8a29de9939cbb7/geolookup/conditions/forecast/q/TX/Dallas.xml"));
     reply = manager->get(*request);
     // reply is an XML document with all the data from the request
     // reply is parsed once the document is finished downloading in parseXML()
@@ -205,7 +205,7 @@ void webdata::changeCity(QString city)
     QStringList cityList;
     cityList = city.split(",");
     cityList.replaceInStrings(" ","_");
-    QString cityUrl = "http://api.wunderground.com/api/8629c52c6434d424/geolookup/conditions/forecast/q/" + cityList.at(1) + "/" + cityList.at(0) + ".xml";
+    QString cityUrl = "http://api.wunderground.com/api/9d8a29de9939cbb7/geolookup/conditions/forecast/q/" + cityList.at(1) + "/" + cityList.at(0) + ".xml";
 
     qDebug() << cityUrl;
 
